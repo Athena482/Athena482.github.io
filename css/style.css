@@ -4,7 +4,113 @@
     font-family: "Helvetica", sans-serif;
 }
 
-ul {
+html,body { height:100%; }
+
+
+.background{
+    background-color: #7ea881;
+}
+
+main{
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+    padding: 40px;
+    justify-content: center;
+    background-color: white;
+}
+
+.whoami{
+    display: flex;
+    flex-direction: column;
+    padding-top: 46px;
+    align-items: center;
+}
+.whoami li {
+    text-align: center;
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: left;
+    align-items: center;
+}
+
+article ul {
+    padding-top: 10px;
+}
+
+article li p{
+    text-align: left;
+    width: 100%;
+}
+
+article p{
+    text-align: center;
+    max-width: 750px;
+}
+
+article img{
+    padding: 10px;
+    width: 50%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1 {
+    text-align: center;
+    padding: 20px;
+}
+
+/*//// Blog posts ////*/
+
+.blog{
+    width: 50%;
+    padding: 10px;
+    border-radius: 5px;
+    height: 250px;
+    margin: 10px;
+    background-color: rgb(238, 238, 238);
+}
+
+.blogs{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+.blogs hr{
+    width: 50%
+}
+
+/*//// Header & Footer ////*/
+
+header {
+    position: fixed;
+    width: 100%;
+}
+
+footer {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    background-color: lightgray;
+}
+
+footer p {
+    float: right;
+    padding: 5px
+}
+
+/*//// Navigation bar ////*/
+
+nav ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -14,11 +120,11 @@ ul {
   justify-content: center;
 }
 
-ul li{
+nav ul li{
     float: left;
 }
 
-ul li a{
+nav ul li a{
     display: block;
     color: black;
     text-align: center;
@@ -26,23 +132,11 @@ ul li a{
     text-decoration: none;
 }
 
-ul li a.active1 {
-  background-color: #04AA6D;
+nav ul li a.active1 {
+  background-color: #46a14e;
 }
 
-ul li a:hover:not(.active1){
-    background-color: #555555;
+nav ul li a:hover:not(.active1){
+    background-color: #49704d;
     color: white;
-}
-
-footer {
-    position: absolute;
-    bottom: 0px;
-    width: 100%;
-    background-color: lightgray;
-}
-
-footer p {
-    float: right;
-    padding: 5px
 }
