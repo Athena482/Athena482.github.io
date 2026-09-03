@@ -3,27 +3,35 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: "Helvetica", sans-serif;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+code,
+pre,
+body {
+    font-family: "JetBrains Mono", monospace;
+}
+
 
 html,body { height:100%; }
 
 
 .background{
-    background-color: #7ea881;
+    background-color: #2a2c3a;
 }
 
 
 
 main{
     display: flex;
-    margin-left: auto;
-    margin-right: auto;
+    float: right;
     width: 75%;
     padding: 40px;
     min-height: 100vh;
     justify-content: center;
-    background-color: white;
+    background-color: rgb(39, 39, 39);
+    color: rgb(220, 248, 252);
 }
 
 .whoami{
@@ -87,6 +95,59 @@ h1 {
   100% {transform: rotate(360deg);}
 }
 
+
+/*//// About me ////*/
+
+.whoami hr{
+    width: 50%;
+    margin: 10px;
+}
+
+/*//// Dashboard ////*/
+
+.dashboard{
+    background-color: #2a452d;
+    color:rgb(208, 208, 208);
+    margin: 10px;
+}
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 10px;
+  text-align: center;
+}
+
+th{
+    margin: 5px;
+}
+
+th.centertable{
+    width: 50px;
+}
+th:not(.centertable){
+    width: 250px;
+}
+
+td#even{
+    background-color: #9eb7a0;
+}
+
+td#odd{
+    background-color: #D6EEEE;
+}
+
+.centertable{
+    text-align: center;
+}
+
+tr{
+    height: 40px;
+    color: rgb(61, 61, 61);
+}
+
+
+
 /*//// Blog posts ////*/
 
 .blog{
@@ -112,51 +173,71 @@ h1 {
 /*//// Header & Footer ////*/
 
 header {
-    position: fixed;
-    width: 100%;
+    position: absolute;
+    width: 200px;
 }
 
 footer {
-    position: fixed;
-    bottom: 0px;
+    display: flex;
+    height: 150px;
     width: 100%;
-    background-color: lightgray;
+    background-color: rgb(0, 0, 0);
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
 }
 
 footer p {
-    float: right;
-    padding: 5px
+    padding: 25px;
+    color: white;
+}
+
+.social-buttons{
+    display: flex;
+    justify-content: center;
+}
+
+img{
+    width: 50px;
+    height: 50px;
 }
 
 /*//// Navigation bar ////*/
+
+nav {
+    position: absolute;
+    top: 25vh;
+}
+
+nav ul li:hover{
+      transition: 0.2;
+}
+nav ul li{
+    width:180px;
+}
 
 nav ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  overflow: hidden;
-  background-color: lightgray;
-  display: flex;
-  justify-content: center;
-}
-
-nav ul li{
-    float: left;
+  width: 180px;
+  background-color: black;
 }
 
 nav ul li a{
     display: block;
-    color: black;
+    color: white;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
 }
 
 nav ul li a.active1 {
-  background-color: #46a14e;
+  background-color: #337939;
 }
 
 nav ul li a:hover:not(.active1){
-    background-color: #49704d;
+    background-color: #568c5b;
     color: white;
+    transition: 0.2s;
 }
