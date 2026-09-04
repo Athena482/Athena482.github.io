@@ -1,26 +1,34 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body class="background">
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+  <body>
     <header>
+        <img src="/resources/logo.png" id="logo">
         <nav>
             <ul>
-                <li><a class="active1" href="/">Home</a></li>
+                <li><a class="active" href="/">Home</a></li>
                 <li><a href="profile.html">Profile</a></li>
                 <li><a href="dashboard.html">Dashboard</a></li>
                 <li><a href="blog.html">Blog</a></li>
                 <li><a href="why-it.html">Why IT?</a></li>
             </ul>
-        </div>
+        </nav>
     </header>
     <main>
-        <div class="whoami">
-            <h1>Welkom bij mijn portfolio!</h1>
-            <p>Maar dit is niet zomaar een portfolio.. Dit is een <p class="rainbow">ICT portfolio!</p> </p>
-            <p class="spin">Hier ga jij mijn voortgang, tegenslagen, en mijn gedachtes kunnen lezen over ICT, en waarom het bij mij past.</p>
-            <h2>Test</h2>
+        <div class="main-content">
+            <h1>My Portfolio</h1>
+            <p>But this isn't just any kind of portfolio.. This is an<p id="rainbow">IT portfolio!</p> </p>
+            <p class="spin">Here, you'll be able to see my progression, where I get stuck, what I made, and my thoughts about IT</p>
+            <h2>What you'll find here?</h2>
+            <ul id="clean-list">
+                <li><a href="dashboard.html" id="internal-link"><p>My progression in my first year of HBO ICT.</p></a></li>
+                <li><a href="profile.html" id="internal-link"><p>Information about myself, like my hobbies.</p></a></li>
+                <li><a href="why-it.html" id="internal-link"><p>Why I chose IT/Software Developer as my profession.</p></a></li>
+                <li><a href="blog.html" id="internal-link"><p>Be able to read my thoughts about school, IT, and it's development</p></a></li>
+            </ul>
         </div>
     </main>
     <footer>
@@ -33,5 +41,5 @@
             <p>Copyright 2026 Quinten</p>
         </div>
     </footer>
-</body>
+  </body>
 </html>

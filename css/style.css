@@ -1,10 +1,3 @@
-/*//// Side wide changes ////*/
-
-*{
-    margin: 0;
-    padding: 0;
-}
-
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap');
 
 code,
@@ -13,36 +6,153 @@ body {
     font-family: "JetBrains Mono", monospace;
 }
 
-
-html,body { height:100%; }
-
-
-.background{
-    background-color: #2a2c3a;
+html{
+    height: auto;
+    background: radial-gradient(ellipse at bottom, #273648 0%, #090A0F 100%);
+}
+body{
+    height: 100%;
+    margin-right: 0px;
+    margin-bottom: 0px;
 }
 
+#rainbow{
+    animation: rainbow 5s linear infinite;
+}
 
+@keyframes rainbow {
+    0% {color:rgb(255, 0, 0);}
+    16% {color:rgb(255, 255, 0);}
+  32% {color:rgb(0, 255, 0);}
+  48% {color:rgb(0, 255, 255);}
+  64% {color:rgb(0, 0, 255);}
+  82% {color:rgb(255, 0, 255);}
+  100% {color:rgb(255, 0, 0);}
+}
+
+.spin {
+    margin: 70px;
+    width: 20%;
+    animation: mymove 20s linear infinite;
+}
+
+.spin:hover{
+    animation: mymove 0s linear infinite;
+}
+
+@keyframes mymove {
+  100% {transform: rotate(360deg);}
+}
+
+/*//// Main Elements ////*/
+
+.main-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 main{
     display: flex;
     float: right;
-    width: 75%;
+    width: 60%;
     padding: 40px;
     min-height: 100vh;
     justify-content: center;
-    background-color: rgb(39, 39, 39);
-    color: rgb(220, 248, 252);
+    background: radial-gradient(ellipse at bottom, #3b3b3b 0%, #1b1b1b 100%);
+    border-radius: 15px 0px 0px 5px;
+    color: white;
+    border: black;
+    border-style: solid;
+    border-width: 1px;
 }
 
-.whoami{
+footer {
     display: flex;
-    flex-direction: column;
-    padding-top: 46px;
+    bottom: 0;
+    height: 150px;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    justify-content: flex-end;
     align-items: center;
+    flex-direction: column;
 }
-.whoami li {
+
+footer p {
+    padding: 10px;
+    color: white;
+}
+
+.social-buttons{
+    display: flex;
+    justify-content: center;
+}
+
+img{
+    width: 50px;
+    height: 50px;
+}
+
+#clean-list{
     text-align: center;
+    list-style-type: none;
 }
+
+#internal-link:visited{
+    color: #ffffff;
+}
+
+/* Side bar (Navigation + Logo) */
+
+header {
+    position: absolute;
+    width: 200px;
+}
+
+#logo{
+    padding-top: 25px;
+    padding-left: 65px;
+}
+
+nav {
+    position: absolute;
+    top: 25vh;
+}
+
+nav ul li:hover{
+      transition: 0.2;
+}
+nav ul li{
+    width:180px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 180px;
+  background-color: black;
+}
+
+nav ul li a{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+nav ul li a.active {
+  background-color: #334f79;
+}
+
+nav ul li a:hover:not(.active){
+    background-color: rgb(101, 101, 133);
+    color: white;
+    transition: 0.2s;
+}
+
+/*//// Profile ////*/
 
 article {
     display: flex;
@@ -75,44 +185,45 @@ article img{
     margin-right: auto;
 }
 
-h1 {
-    text-align: center;
-    padding: 20px;
-}
-/*//// Index page ////*/
-
-.spin {
-    margin: 50px;
-    width: 20%;
-    animation: mymove 20s linear infinite;
-}
-
-.spin:hover{
-    animation: mymove 0s linear infinite;
-}
-
-@keyframes mymove {
-  100% {transform: rotate(360deg);}
-}
-
-
-/*//// About me ////*/
-
-.whoami hr{
+.main-content hr{
     width: 50%;
     margin: 10px;
 }
 
-/*//// Dashboard ////*/
+/* Blog */
+
+.blog{
+    width: 50%;
+    padding: 10px;
+    border-radius: 5px;
+    height: 250px;
+    margin: 10px;
+    color: black;
+    background-color: rgb(224, 224, 224);
+}
+
+.blogs{
+    display: flex;
+    padding: 0px;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+.blogs hr{
+    width: 50%
+}
+
+/* Dashboard */
 
 .dashboard{
-    background-color: #2a452d;
-    color:rgb(208, 208, 208);
+    background-color: #364f6b;
+    color:rgb(255, 255, 255);
     margin: 10px;
 }
 
 table, th, td {
-  border: 1px solid black;
+  border: 1px solid #29343d;
   border-collapse: collapse;
   padding: 10px;
   text-align: center;
@@ -130,11 +241,11 @@ th:not(.centertable){
 }
 
 td#even{
-    background-color: #9eb7a0;
+    background-color: #7f9db4;
 }
 
 td#odd{
-    background-color: #D6EEEE;
+    background-color: #e9edf1;
 }
 
 .centertable{
@@ -144,100 +255,4 @@ td#odd{
 tr{
     height: 40px;
     color: rgb(61, 61, 61);
-}
-
-
-
-/*//// Blog posts ////*/
-
-.blog{
-    width: 50%;
-    padding: 10px;
-    border-radius: 5px;
-    height: 250px;
-    margin: 10px;
-    background-color: rgb(238, 238, 238);
-}
-
-.blogs{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    align-items: center;
-}
-
-.blogs hr{
-    width: 50%
-}
-
-/*//// Header & Footer ////*/
-
-header {
-    position: absolute;
-    width: 200px;
-}
-
-footer {
-    display: flex;
-    height: 150px;
-    width: 100%;
-    background-color: rgb(0, 0, 0);
-    justify-content: flex-end;
-    align-items: center;
-    flex-direction: column;
-}
-
-footer p {
-    padding: 25px;
-    color: white;
-}
-
-.social-buttons{
-    display: flex;
-    justify-content: center;
-}
-
-img{
-    width: 50px;
-    height: 50px;
-}
-
-/*//// Navigation bar ////*/
-
-nav {
-    position: absolute;
-    top: 25vh;
-}
-
-nav ul li:hover{
-      transition: 0.2;
-}
-nav ul li{
-    width:180px;
-}
-
-nav ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  width: 180px;
-  background-color: black;
-}
-
-nav ul li a{
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-nav ul li a.active1 {
-  background-color: #337939;
-}
-
-nav ul li a:hover:not(.active1){
-    background-color: #568c5b;
-    color: white;
-    transition: 0.2s;
-}
+}   
